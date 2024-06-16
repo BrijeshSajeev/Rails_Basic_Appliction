@@ -1,13 +1,14 @@
 <h1>Article View</h1>
 
 <ul>
-  <% @articles.each do |art|%>
+  <% @articles.each do |article|%>
+    <a href="<%= article_path(article)%>">
+        <%= article.title%>
+      </a>
+
     <li>
-      <h3>
-        <%= art.title%>
-      </h3>
       <p>
-        <%= art.body %>
+        <%= article.body %>
       </p>
     </li>
   <%end%>
